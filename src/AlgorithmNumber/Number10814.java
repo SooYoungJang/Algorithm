@@ -1,10 +1,12 @@
+package AlgorithmNumber;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
-public class Main {
-
+public class Number10814 {
     public static void main(String[] args) throws IOException {
         //N 명의 유저가있으며, 입력순이 곧 가입한 시간순입니다.
         //나이로 먼저 오름차순으로 정렬을하며, 같은 나이라면 먼저입력 가입한 순으로 오름차순으로 출력합니다.
@@ -38,6 +40,6 @@ class user implements Comparable<user> {
 
     @Override
     public int compareTo(user o) {
-        return age - o.age;
+     return age - o.age;
     }
 }
