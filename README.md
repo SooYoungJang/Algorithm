@@ -20,3 +20,15 @@
 </div>
 </details>
 
+<details>
+<summary>Comparable 와 Comparator</summary>
+<div markdown="1">
+
+|제목|내용|
+|--|--|
+|Comparable|Comparable은 1."자기 자신과 매개변수 객체를 비교", 2."compareTo 메소드를 반드시 구현해야한다."|
+|Comparator|Comparator는 1."두 매개변수 객체를 비교" 2." compare 메소드를 반드시 구현해야 한다."|
+
+</div>
+</details>
+
