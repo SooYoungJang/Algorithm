@@ -15,6 +15,7 @@ public class Number11650 {
 
         //이중 for 문을 돌려서 시간초과 : 시간복잡도 O(N^2) 가 되었다;
         //다른 방안으로 Comparable
+        // Y축 즉 세로 방향으로 정렬할때 사용 (오름차순으로 )
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
