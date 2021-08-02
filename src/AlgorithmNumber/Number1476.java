@@ -1,9 +1,10 @@
+package AlgorithmNumber;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
-
+public class Number1476 {
     public static void main(String[] args) throws IOException {
         //a 는 16이 되면 다시 1로 초기화.
         //b는 29가 되면 다시 1초 초기화
@@ -25,6 +26,9 @@ public class Main {
 
         while (countA != a || countB != b || countC != c) {
             countA++; countB++; countC++;
+            System.out.println(countA + " a = " + a );
+            System.out.println(countB + " b = " + b );
+            System.out.println(countC + " c = " + c );
             if(countA == 16) {
                 countA = 1;
             }
