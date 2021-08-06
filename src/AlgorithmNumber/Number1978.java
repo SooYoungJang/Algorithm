@@ -1,9 +1,12 @@
+package AlgorithmNumber;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.stream.Stream;
 
-public class Main {
+public class Number1978 {
     public static void main(String[] args) throws IOException {
         //N 개의 갯수와 수가 주어지면 소수를 찾는다.
         // 소수란 : 1과 자기자신을 제외한 나머지 약수
@@ -24,25 +27,14 @@ public class Main {
     }
     private static int calcul(int inputNumber) {
         int count =0;
-        for (int i = 2; i < inputNumber -1; i++) {
-            if(inputNumber % i == 0) {
-                count = 1;
-                break;
-            }else if(inputNumber % i != 0){
+        for (int i = 1; i < inputNumber; i++) {
+            if (inputNumber == 1 ) {
                 count = 0;
+            }else if(inputNumber % i == 0) {
+                count = 1;
             }
         }
-        if(count == 1) {
-            count = 0;
-        }else {
-            count = 1;
-        }
-        if (inputNumber == 1) {
-            count = 0;
-        }
-
         return count;
     }
 }
-
 
