@@ -1,9 +1,11 @@
+package AlgorithmNumber;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 
-public class Main {
+public class Number10845 {
     public static ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -60,4 +62,3 @@ public class Main {
         return outPut;
     }
 }
-
