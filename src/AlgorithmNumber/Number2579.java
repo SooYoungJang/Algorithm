@@ -3,7 +3,6 @@ package AlgorithmNumber;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
 
 public class Number2579 {
     public static void main(String[] args) throws IOException {

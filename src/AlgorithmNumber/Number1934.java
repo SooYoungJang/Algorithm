@@ -18,6 +18,7 @@ public class Number1934 {
             int input2 = Integer.parseInt(st[1]);
 
             long gcd = gcd(input1,input2);
+            System.out.println(gcd);
             sb.append(lcm(input1 * input2, gcd) + "\n");
         }
 
