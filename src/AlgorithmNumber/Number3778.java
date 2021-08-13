@@ -1,18 +1,20 @@
+package AlgorithmNumber;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class Number3778 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        for (int i =0; i < n; i++) {
-            System.out.println("Case #"+ (i+1) + ": " +anaGram(br.readLine(),br.readLine()));
+        for (int i =0; i < n * 2; i++) {
+            System.out.println(anaGram(br.readLine(),br.readLine()));
         }
     }
-    private static int anaGram(String firStr, String secStr) {
+    private static String anaGram(String firStr, String secStr) {
         char[] firChars = firStr.toCharArray();
         char[] secChars = secStr.toCharArray();
         HashMap<Character,Integer> hashMap = new HashMap<>();
@@ -30,6 +32,6 @@ public class Main {
         for (Map.Entry<Character,Integer> entry : hashMap.entrySet()) {
             count += Math.abs(entry.getValue());
         }
-        return count;
+        return "Case #2: "+count;
     }
 }

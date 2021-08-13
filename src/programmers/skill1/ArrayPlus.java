@@ -3,7 +3,7 @@ package programmers.skill1;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class arrayPlus {
+public class ArrayPlus {
     public static void main(String[] args) throws IOException {
         int[][] test = {{1,2},{2,3}};
         int[][] test1 = {{3,4}, {5,6}};

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class dartGame {
+public class DartGame {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // 다트 결과 예로 1s2t*3d# 식으로 들어옴. 총점수 계산.
