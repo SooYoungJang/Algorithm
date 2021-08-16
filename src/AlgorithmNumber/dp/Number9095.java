@@ -1,8 +1,10 @@
+package AlgorithmNumber.dp;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class Number9095 {
     private static int[] dpArr;
     public static void main(String[] args) throws IOException {
         // 정수 n 을 1,2,3 의 합으로 나타내는 모든경우의 수를 구해라

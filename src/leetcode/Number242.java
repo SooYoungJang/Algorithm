@@ -7,30 +7,28 @@ import java.util.Map;
 
 public class Number242 {
     public static void main(String[] args) throws IOException {
-        System.out.println(isAnagram("11","2"));
+        System.out.println(isAnagram("aa","bb"));
     }
 
     private static boolean isAnagram(String s, String t) {
         boolean b = true;
+        if(s.length() != t.length()) {
+            return false;
+        }
+        HashMap<Character,Integer> hashMap = new HashMap<>();
         char[] sChars = s.toCharArray();
         char[] tChars = t.toCharArray();
-        HashMap<Character,Integer> hashMap = new HashMap<>();
-        int sum = 0;
         for (int i=0; i< sChars.length; i++) {
             hashMap.put(sChars[i],hashMap.getOrDefault(sChars[i],0) +1);
-        }
-        for (int i=0; i<tChars.length; i++) {
             hashMap.put(tChars[i],hashMap.getOrDefault(tChars[i],0) -1);
-            if(hashMap.get(tChars[i]) != 0) {
+
+        }
+
+        for (Map.Entry<Character,Integer> entry : hashMap.entrySet()) {
+            if(entry.getValue() != 0) {
                 return false;
             }
         }
-
-//        for (Map.Entry<Character,Integer> entry : hashMap.entrySet()) {
-//            if(entry.getValue() != 0) {
-//                return false;
-//            }
-//        }
 
         return b;
     }
