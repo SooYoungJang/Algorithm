@@ -32,7 +32,6 @@ public class Main {
             System.out.println(dpSum(Integer.parseInt(br.readLine())));
         }
 
-
     }
     private static int dpSum(int n) {
         if(dpArr[n] == -1) {
