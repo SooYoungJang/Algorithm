@@ -1,43 +1,40 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Main {
-    private static int[] dpArr;
+
     public static void main(String[] args) throws IOException {
-        // 정수 n 을 1,2,3 의 합으로 나타내는 모든경우의 수를 구해라
-        // 5일경우 ? 13
-        // 4일경우 ? 7
-        // 3일경우 ? 4
-        // 2일경우 ? 2
-        // 1일경우 ? 1
-        //1+1+1+1
-        //1+1+2
-        //1+2+1
-        //2+1+1
-        //2+2
-        //1+3
-        //3+1
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        dpArr = new int[10 + 1];
-        dpArr[0] = 0;
-        dpArr[1] = 1;
-        dpArr[2] = 2;
-        dpArr[3] = 4;
-        for (int i=4; i<10 + 1; i++) {
-            dpArr[i] = -1;
-        }
-        for (int i=0; i< n; i++) {
-            System.out.println(dpSum(Integer.parseInt(br.readLine())));
+        System.out.println(solution(new int[]{1,2,3,4}));
+    }
+    private static int solution(int[] nums) {
+        int answer =0;
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i < nums.length; i++) {
+            if(i + 2 >= nums.length) break;
+            for(int j = i + 1; j < nums.length; j++) {
+                for(int h = j + 1; h < nums.length; h++) {
+                    list.add(nums[i] + nums[j] + nums[h]);
+                }
+            }
         }
 
-    }
-    private static int dpSum(int n) {
-        if(dpArr[n] == -1) {
-            dpArr[n] = dpSum(n-1) + dpSum(n-2) + dpSum(n-3);
+        // 저장된 합이 소수인지 판별한다.
+        for(Integer i : list) {
+            int count = 2;
+            answer++;
+            while(count < i) {
+                // 저장된 값이 count로 나눴을 때 나머지가 0이라면 소수가 아니기 때문에 answer의 값을 더하지 않는다.
+                if(i % count == 0) {
+                    answer--;
+                    break;
+                }
+                count++;
+            }
         }
-
-        return dpArr[n];
+        return answer;
     }
+
 }
