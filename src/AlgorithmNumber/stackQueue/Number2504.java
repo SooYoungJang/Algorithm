@@ -19,14 +19,17 @@ public class Number2504 {
         ArrayList<Integer> integers = new ArrayList<>();
         ArrayList<String> strings = new ArrayList<>();
         String str = "";
+        int result =0;
         for (int i=0; i< chars.length; i++) {
             if(chars[i] =='(' || chars[i] == '[') {
                 if(chars[i] =='(') {
                     str += "( 2 * ";
                     scores.push(2);
                     checkBigCount++;
+                    result = result + 2;
                 }else {
                     str += "( 3 * ";
+                    result = result + 3;
                     checkSmallCount++;
                     scores.push(3);
                 }
