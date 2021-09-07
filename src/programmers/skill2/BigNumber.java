@@ -20,7 +20,7 @@ public class BigNumber {
         Arrays.sort(numStrs, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                return (o2+o1).compareTo(o1+02);
+                return (o2+o1).compareTo(o1+o2);
             }
         });
 
