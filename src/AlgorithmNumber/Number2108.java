@@ -23,6 +23,7 @@ public class Number2108 {
         sb.append(diff(arrayList, n)).append("\n");
         System.out.println(sb);
 
+        //
     }
 
     private static int avg(ArrayList<Integer> input, int n) {
