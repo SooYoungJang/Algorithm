@@ -18,4 +18,19 @@ public class Number35 {
         }
         return low;
     }
+
+    public static int intsearchInsert(int[] nums, int target) {
+
+        int check = 0;
+        boolean b  = false;
+        for(int i=0; i< nums.length; i++) {
+            if(nums[i] == target) return i;
+            if(nums[i] < target && !b) {
+                check = i + 1;
+            }else {
+                return check;
+            }
+        }
+        return check;
+    }
 }
