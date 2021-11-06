@@ -24,6 +24,8 @@ public class Number2164 {
             arrayDeque.addLast(arrayDeque.pop());
             cardSize--;
         }
+
+        
         return arrayDeque.pop();
     }
 }
