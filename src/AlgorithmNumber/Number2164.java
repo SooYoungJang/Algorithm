@@ -25,7 +25,7 @@ public class Number2164 {
             cardSize--;
         }
 
-        
+
         return arrayDeque.pop();
     }
 }
