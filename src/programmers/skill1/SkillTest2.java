@@ -33,18 +33,23 @@ public class SkillTest2 {
     }
 
     public static String solution(String[] participant, String[] completion) {
-        Arrays.sort(participant);
-        Arrays.sort(completion);
-        int count =0;
+        //완주하지 못하는 선수는 무조건 1명.
         String answer = "";
-        for (String str : completion) {
-            if(!str.equals(completion[count])) {
-                return completion[count];
+        HashMap<String,Integer> map = new HashMap<>();
+
+        for(int i=0; i < participant.length; i++) {
+            map.put(participant[i], map.getOrDefault(participant[i], 0) +1);
+        }
+        for(int i=0; i < completion.length; i++) {
+            map.put(completion[i], map.getOrDefault(completion[i], 0) -1);
+        }
+        for (Map.Entry<String ,Integer> entry : map.entrySet()) {
+            if(entry.getValue() != 0) {
+                return entry.getKey();
             }
-            count++;
         }
 
-        return participant[participant.length -1];
+        return answer;
     }
 }
 
