@@ -13,6 +13,8 @@ public class Number1920 {
         Set<String> set = new HashSet<>();
         int n = Integer.parseInt(br.readLine());
 
+        //asdf
+
         String[] stringsN = br.readLine().split(" ");
         for (int i=0; i< stringsN.length; i++) {
             set.add(stringsN[i]);
