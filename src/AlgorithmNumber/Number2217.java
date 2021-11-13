@@ -12,6 +12,7 @@ public class Number2217 {
         int n = Integer.parseInt(br.readLine());
         ArrayList<Integer> lope = new ArrayList<>();
         for (int i=0; i < n; i++) {
+            //lope
             lope.add(Integer.parseInt(br.readLine()));
         }
 
