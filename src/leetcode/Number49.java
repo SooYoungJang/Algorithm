@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Number49 {
     public static void main(String[] args) throws IOException {
-        String[] strs = {"eat","tea","tan","ate","nat","bat"};
+        String[] strs = {"eat","tea","tan","ate","nat","bat"};  
         groupAnagrams(strs);
     }
 
