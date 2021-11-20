@@ -11,7 +11,7 @@ public class Number9012 {
         StringBuilder sb = new StringBuilder();
         Stack<String> stack = new Stack<>();
         int n = Integer.parseInt(br.readLine());
-  
+
 
         for (int i=0; i < n; i++) {
             String[] str = br.readLine().split("");
