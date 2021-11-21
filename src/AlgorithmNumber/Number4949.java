@@ -22,7 +22,7 @@ public class Number4949 {
                     stack.push(s.charAt(i));
                 } else if (s.charAt(i) == ')' || s.charAt(i) == ']') {
                     if (stack.isEmpty()) {
-                        System.out.println("no");  
+                        System.out.println("no");
                         break;
                     }
                     if(s.charAt(i) == ')' && type.peek() == 2) {

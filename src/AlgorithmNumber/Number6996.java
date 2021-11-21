@@ -19,7 +19,7 @@ public class Number6996 {
     private static String checkAnaGram(String firStr, String secStr) {
 
         if(firStr.length() != secStr.length()) {
-            return firStr+" & "+secStr + " are NOT anagrams.";
+            return firStr+" & "+secStr + " are NOT anagram.";
         }
 
         char[] firChars = firStr.toCharArray();
