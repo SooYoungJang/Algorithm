@@ -29,7 +29,7 @@ public class Number6996 {
         Arrays.sort(secChars);
 
         if(String.valueOf(firChars).equals(String.valueOf(secChars))) {
-            return firStr+" & "+secStr + " are anagrams.";
+            return firStr+" & "+secStr + " are rams.";
         }else {
             return firStr+" & "+secStr + " are NOT anagrams.";
         }
